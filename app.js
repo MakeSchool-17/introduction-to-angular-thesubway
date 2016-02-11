@@ -1,30 +1,25 @@
 angular.module('redditApp', [])
 .controller("MainCtrl", ['$scope', function($scope){
-    $scope.pokemon = [
+    $scope.tournaments = [
   {
-    ndex: 25,
     name: 'Pikachu',
-    type: 'Electric'
+    format: 0
   },
   {
-    ndex: 10,
     name: 'Caterpie',
-    type: 'Bug'
+    format: 1
   },
   {
-    ndex: 39,
     name: 'Jigglypuff',
-    type: 'Fairy'
+    format: 0
   },
   {
-    ndex: 94,
-     name: 'Gengar',
-    type: 'Ghost'
+    name: 'Gengar',
+    format: 1
   },
   {
-    ndex: 143,
     name: 'Snorlax',
-    type: 'Normal'
+    format: 1
   }
-];
+  ];
 }]);
