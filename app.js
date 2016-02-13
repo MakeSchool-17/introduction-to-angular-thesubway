@@ -23,10 +23,11 @@ angular.module('redditApp', [])
   }
   ];
 
-  $scope.tournament = { title: "", voteCount: 0 };
+  $scope.tournament = { title: "", format: 0 };
 
   $scope.createPost = function() {
     console.log($scope.tournament);
+    $scope.tournament = { title: $scope.post.title, format: $scope.post.format};
     $scope.tournaments.push($scope.tournament);
     $scope.tournament = { name: "", format: 0 };
   };
