@@ -22,4 +22,12 @@ angular.module('redditApp', [])
     format: 1
   }
   ];
+
+  $scope.tournament = { title: "", voteCount: 0 };
+
+  $scope.createPost = function() {
+    console.log($scope.tournament);
+    $scope.tournaments.push($scope.tournament);
+    $scope.tournament = { name: "", format: 0 };
+  };
 }]);
