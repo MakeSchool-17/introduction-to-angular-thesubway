@@ -26,7 +26,21 @@ angular.module('redditApp', [])
   $scope.tournament = { title: "", format: 0 };
 
   $scope.createPost = function() {
-    console.log($scope.tournament);
+    var valid = true;
+    var errors = "";
+    if ($scope.post == null) {
+        //this one requires immediate-break to avoid crashes.
+        alert("Please fill out required fields");
+        return false;
+    }
+    if (!$scope.post.hasOwnProperty('title') || !$scope.post.hasOwnProperty('format')) {
+        valid = false;
+        errors = "Please fill out required fields";
+    }
+    if (valid == false) {
+        alert(errors);
+        return false;
+    }
     $scope.tournament = { title: $scope.post.title, format: $scope.post.format};
     $scope.tournaments.push($scope.tournament);
     $scope.tournament = { name: "", format: 0 };
