@@ -12,10 +12,10 @@
   <p>{{term}}</p>
   <div ng-repeat="(key, value) in tournaments">{{value}}</div>
 
-  <form name="postForm" ng-submit="createPost()">
-    <input type="text" placeholder="Title" ng-model="post.title">
-    <input type="text" placeholder="Format" ng-model="post.format">
-    <button type="submit">Save</button>
+  <form name="postForm" ng-submit="createPost(postForm.$valid)" novalidate>
+    <input type="text" placeholder="Title" ng-model="post.title" required>
+    <input type="text" placeholder="Format" ng-model="post.format" required>
+    <button type="submit" ng-disabled="userForm.$invalid">Save</button>
   </form>
 </body>
 </html>
