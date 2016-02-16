@@ -31,11 +31,6 @@ angular.module('redditApp', [])
         alert("Please fill out correct formats");
         return false;
     }
-    if ($scope.post == null) {
-        //this one requires immediate-break to avoid crashes.
-        alert("Please fill out required fields");
-        return false;
-    }
     //if (!$scope.post.hasOwnProperty('title') || !$scope.post.hasOwnProperty('format'))
     $scope.tournament = { title: $scope.post.title, format: $scope.post.format};
     $scope.tournaments.push($scope.tournament);

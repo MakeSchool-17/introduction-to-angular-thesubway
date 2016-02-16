@@ -15,7 +15,7 @@
   <form name="postForm" ng-submit="createPost(postForm.$valid)" novalidate>
     <input type="text" placeholder="Title" ng-model="post.title" required>
     <input type="text" placeholder="Format" ng-model="post.format" required>
-    <button type="submit" ng-disabled="userForm.$invalid">Save</button>
+    <button type="submit" ng-disabled="postForm.$invalid">Save</button>
   </form>
 </body>
 </html>
