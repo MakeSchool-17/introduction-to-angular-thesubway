@@ -10,7 +10,7 @@
 
   <input type="text" ng-model="term" />
   <p>{{term}}</p>
-  <div ng-repeat="(key, value) in tournaments">{{value}}</div>
+  <div ng-repeat="tournament in tournaments" ng-click="changeFormat(tournament)">{{tournament}}</div>
 
   <form name="postForm" ng-submit="createPost(postForm.$valid)" novalidate>
     <input type="text" placeholder="Title" ng-model="post.title" required>

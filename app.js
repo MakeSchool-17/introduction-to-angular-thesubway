@@ -36,4 +36,13 @@ angular.module('redditApp', [])
     $scope.tournaments.push($scope.tournament);
     $scope.tournament = { name: "", format: 0 };
   };
+
+  $scope.changeFormat = function(tournament) {
+      if (tournament.format == 1) {
+          tournament.format = 0;
+      }
+      else if (tournament.format == 0) {
+          tournament.format = 1;
+      }
+  };
 }]);
