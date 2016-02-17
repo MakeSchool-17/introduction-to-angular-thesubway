@@ -1,5 +1,5 @@
 angular.module('redditApp', [])
-.controller("MainCtrl", ['$scope', function($scope){
+.controller("MainCtrl", ['$scope', '$http', function($scope, $http){
     $scope.tournaments = [
   {
     name: 'Pikachu',
@@ -45,4 +45,15 @@ angular.module('redditApp', [])
           tournament.format = 1;
       }
   };
+
+  var url = "http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC";
+
+  $http.get(url).then(
+    function successCallback(response) {
+      console.log('success');
+    },
+    function errorCallback(response) {
+      console.log('error');
+    }
+  );
 }]);
