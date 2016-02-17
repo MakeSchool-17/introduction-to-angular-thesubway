@@ -50,10 +50,13 @@ angular.module('redditApp', [])
 
   $http.get(url).then(
     function successCallback(response) {
-      console.log('success');
+      $scope.imageURL = response.data.data.image_url;
     },
     function errorCallback(response) {
       console.log('error');
     }
   );
+
+  //for image:
+  $scope.hash = "";
 }]);
