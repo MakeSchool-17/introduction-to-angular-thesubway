@@ -1,3 +1,4 @@
+angular.module('myApp', ['ui.router']);
 angular.module('redditApp', [])
 .controller("MainCtrl", ['$scope', '$http', function($scope, $http){
     $scope.tournaments = [
