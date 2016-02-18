@@ -1,4 +1,19 @@
-angular.module('myApp', ['ui.router']);
+angular.module('myApp', ['ui.router'])
+.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+      $stateProvider
+        .state('/', {
+          url: 'index.html',
+          templateUrl: 'templates/posts.html',
+          controller: 'MainCtrl'
+        })
+        .state('tournament-details', {
+          url: 'index.html',
+          templateUrl: '/post/:postId',
+          controller: 'PostsCtrl'
+        })
+        ;
+      $urlRouterProvider.otherwise('/');
+    }]);
 angular.module('redditApp', [])
 .controller("MainCtrl", ['$scope', '$http', function($scope, $http){
     $scope.tournaments = [

@@ -8,18 +8,6 @@
   <!-- <script src="vendor/angular/angular.min.js"></script> -->
 </head>
 <body ng-controller="MainCtrl">
-
-  <input type="text" ng-model="term" />
-  <p>{{term}}</p>
-  <div ng-repeat="tournament in tournaments" ng-click="changeFormat(tournament)">{{tournament}}</div>
-
-  <form name="postForm" ng-submit="createPost(postForm.$valid)" novalidate>
-    <input type="text" placeholder="Title" ng-model="post.title" required>
-    <input type="text" placeholder="Format" ng-model="post.format" required>
-    <button type="submit" ng-disabled="postForm.$invalid">Save</button>
-  </form>
-
-  <img ng-src="{{imageURL}}" alt="Description" />
-
+  <div ui-view></div>
 </body>
 </html>
